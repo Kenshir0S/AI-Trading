@@ -3,8 +3,8 @@ import streamlit as st
 from views import show_close_price
 
 
-from_symbol_list = ["USD", "JPY"]
-to_symbol_list = ["JPY", "USD"]
+from_symbol_list = ["USD", "JPY", "GBP", "EUR", "CAD", "AUD"]
+to_symbol_list = ["JPY", "USD", "EUR", "GBP", "AUD", "CAD"]
 interval_list = ["1min", "5min", "15min", "30min", "60min"]
 
 def select_pair_interval():
