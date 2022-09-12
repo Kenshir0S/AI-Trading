@@ -1,5 +1,7 @@
 api_key
 env
 AI-Trading/img
-__pycache__
+AI-Trading/__pycache__
+AI-Trading/app/__pycache__
+AI-Trading/machine_learning/__pycache__
 .DS_Store
