@@ -58,8 +58,8 @@ class GetDataFrame():
             return df
 
         hist_df = pd.read_csv(f"{csv_path}hist_data_{self.from_symbol}{self.to_symbol}_{self.interval}.csv", parse_dates=["datetime"])
-        concat_df = pd.concat([df, hist_df], ignore_index=True)
-        concat_df = concat_df.drop_duplicates()
+        concat_df = pd.concat([hist_df, df], ignore_index=True)
+        concat_df = concat_df.drop_duplicates(subset="datetime")
 
         concat_df.to_csv(f"{csv_path}hist_data_{self.from_symbol}{self.to_symbol}_{self.interval}.csv", index=False)
 
