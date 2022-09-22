@@ -79,7 +79,7 @@ class PredClosePrice:
         pred = self.model.predict(test_data)
         pred = list(map(lambda pred_price: [pred_price[0] * 10], pred))
 
-        rmse = mean_squared_error(test_data, pred)
+        rmse = mean_squared_error(test_data, pred, squared=False)
         print("RMSE:", rmse)
         mae = mean_absolute_error(test_data, pred)
         print("MAE:", mae)
